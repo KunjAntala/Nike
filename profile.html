@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/WebSite/assets/nike_logo.svg">
+    <script src="/WebSite/profile.js"></script>
+    <title>Welcomme to Nike - Sign In</title>
+</head>
+<body class="flex justify-center">
+    <div class="signin w-[37%] mt-8">
+        <div class="w-[45px] flex flex-row">
+            <img src="/WebSite/assets/nike_logo.svg" alt="">
+            <img src="/WebSite/assets/jordan_logo.svg" alt="">
+        </div>
+
+        <div class="flex flex-col mt-3">
+            <form action="">
+                <p class="py-6 text-3xl font-semibold">Profile</p>
+                <hr><br>
+                <p class="text-xl flex justify-center underline">Welcome</p><br><br>
+                <p class="text-xl">Name:
+                    <script>
+                        const userName = JSON.parse(localStorage.getItem("loggedInUser"))
+                        document.write(userName?.name);
+                    </script>
+                </p><br><br>
+
+                <p class="text-xl">Email:
+                    <script>
+                        const userEmail =JSON.parse(localStorage.getItem("loggedInUser"))
+                        document.write(userEmail?.email);
+                    </script>
+
+                </p><br><br>
+                <div class="mt-9 flex justify-end">
+                    <button class="text-xm bg-black my-2.5 px-6 py-3 rounded-3xl text-white hover:bg-[#707072]" onclick="logout()">Logout</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

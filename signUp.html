@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/WebSite/assets/nike_logo.svg">
+    <script src="/WebSite/signUp.js"></script>
+    <title>Welcomme to Nike - Join Us</title>
+</head>
+<body class="flex justify-center">
+    <div class="signin w-[37%] mt-8">
+        <div class="w-[45px] flex flex-row">
+            <img src="/WebSite/assets/nike_logo.svg" alt="">
+            <img src="/WebSite/assets/jordan_logo.svg" alt="">
+        </div>
+
+        <div class="flex flex-col mt-3">
+            <form action="">
+                <p class="py-6 text-3xl">Now let's make you a Nike Member.</p>
+                <div class="name flex flex-row justify-between">
+                    <input class="border border-[#707072] placeholder:text-[#707072] hover:border-black px-3 py-4 rounded-xl mt-2 w-[48%]" type="text" id="first_name" name="first_name" placeholder="First Name*" required>
+                    <input class="border border-[#707072] placeholder:text-[#707072] hover:border-black px-3 py-4 rounded-xl mt-2 w-[48%]" type="text" id="last_name" name="last_name" placeholder="Last Name*" required>
+                </div>
+                <div class="wrap border border-[#707072] rounded-xl p-2 px-4 mt-8  text-[#707072]">
+                    <small>Gender:</small><br>
+                    <input type="radio" id="gender" name="gender" required> Male
+                    <i class="fa-solid fa-mars"></i>
+
+                    <input class="ml-5" type="radio" id="gender" name="gender" required> Female
+                    <i class="fa-solid fa-venus"></i>
+
+                    <input class="ml-5" type="radio" id="gender" name="gender" required> Other
+                    <i class="fa-solid fa-transgender"></i>
+                </div>
+                <input type="email" id="email" name="email" class="border border-[#707072] placeholder:text-[#707072] hover:border-black px-3 py-4 rounded-xl mt-8 w-full" placeholder="Email*" required>
+                <input type="password" id="password" name="password" class="border border-[#707072] placeholder:text-[#707072] hover:border-black px-3 py-4 rounded-xl mt-8 w-full" placeholder="Password*" required>
+                <p class="px-4 pt-3 text-[13px] text-[#707072] flex items-center">X Minimum of 8 characters</p>
+                <p class="px-4 pt-3 text-[13px] text-[#707072] flex items-center">X Uppercase, lowercase letters and one number</p>
+                <input type="text" id="phone_number" name="phone_number" class="border border-[#707072] placeholder:text-[#707072] hover:border-black px-3 py-4 rounded-xl mt-8 w-full" placeholder="Phone No*" required>
+                <input type="date" id="date" name="date" class="border placeholder:text-[#707072] border-[#707072] hover:border-black px-3 py-4 rounded-xl mt-8 w-full" placeholder="Date of Birth**" required>
+                <textarea name="address" id="address" rows="3" cols="30" class="border placeholder:text-[#707072] border-[#707072] hover:border-black px-3 py-4 rounded-xl mt-8 w-full" placeholder="Address*" required></textarea>
+                <div class="mt-5">
+                    <input class="w-4 h-4" type="checkbox" id="notification" name="notification" required>
+                    <span class="pl-3 text-xm text-black">I agree to Nike's <span class="underline font-semibold">Privacy Policy.</span>and <span class="underline font-semibold">Terms of Use</span></span>
+                </div>
+                <div class="mt-9 flex justify-end">
+                    <button class="text-xm bg-black my-2.5 px-6 py-3 rounded-3xl text-white hover:bg-[#707072]" type="Submit" onclick="saveData()">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
