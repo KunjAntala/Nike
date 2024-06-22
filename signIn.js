@@ -1,3 +1,21 @@
+function validateForm(){
+
+    var email = document.myform.email.value;
+    var password = document.myform.password.value;
+
+    if (email == null || email == "") {
+        document.getElementById("error").innerHTML = "Email is Required";
+        return false;
+    } 
+    else if (password == null || password == "") {
+        document.getElementById("errorr").innerHTML = "Password is Required";
+        return false
+    }
+    else {
+        return true;
+    }
+}
+
 let name = localStorage.getItem("first_name") ? localStorage.getItem("first_name") : ""
 console.log(name);
 
@@ -31,6 +49,6 @@ function saveData(){
         alert("Welcome");
 
     } else{
-        alert("Password for" + email + "is wrong, Please try Again");
+        alert("Password for " + email + "is wrong, Please try Again");
     }
 }
