@@ -34,6 +34,22 @@
                     </script>
 
                 </p><br><br>
+
+                <p class="text-xl">Phone No:
+                    <script>
+                        const userPno =JSON.parse(localStorage.getItem("loggedInUser"))
+                        document.write(userPno?.user_phoneno);
+                    </script>
+
+                </p><br><br>
+
+                <p class="text-xl">Email:
+                    <script>
+                        const userAddress =JSON.parse(localStorage.getItem("loggedInUser"))
+                        document.write(userAddress?.user_address);
+                    </script>
+
+                </p><br><br>
                 <div class="mt-9 flex justify-end">
                     <button class="text-xm bg-black my-2.5 px-6 py-3 rounded-3xl text-white hover:bg-[#707072]" onclick="logout()">Logout</button>
                 </div>
